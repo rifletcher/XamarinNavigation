@@ -1,6 +1,15 @@
-﻿using System;
+﻿using GalaSoft.MvvmLight.Views;
+using XamarinNavigation.Services.Authentication;
+using XamarinNavigation.ViewModels;
+using XamarinNavigation.ViewModels.Base;
+using XamarinNavigation.Views;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 using System.Text;
+using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace XamarinNavigation.Services.Navigation
 {

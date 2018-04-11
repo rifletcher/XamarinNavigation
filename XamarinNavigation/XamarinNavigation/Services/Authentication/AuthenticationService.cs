@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
+using XamarinNavigation.Models;
 
 namespace XamarinNavigation.Services.Authentication
 {
@@ -11,6 +13,7 @@ namespace XamarinNavigation.Services.Authentication
         public bool IsAuthenticated => _isAuthenticated;
 
         public User AuthenticatedUser => throw new NotImplementedException();
+
 
         public Task<bool> LoginAsync(string email, string password)
         {

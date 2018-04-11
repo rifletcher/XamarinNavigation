@@ -142,6 +142,9 @@
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.280555" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\logo_splash.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\XamarinNavigation\XamarinNavigation.projitems" Label="Shared" />
 </Project>

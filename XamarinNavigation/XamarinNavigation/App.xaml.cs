@@ -1,9 +1,19 @@
-﻿using System;
+﻿using XamarinNavigation.Services;
+using XamarinNavigation.ViewModels.Base;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using System.Threading.Tasks;
+using XamarinNavigation.ViewModels;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+using CommonServiceLocator;
+using GalaSoft.MvvmLight.Ioc;
+using XamarinNavigation.Views;
+using GalaSoft.MvvmLight.Views;
+using XamarinNavigation.Services.Authentication;
+using XamarinNavigation.Services.Navigation;
 
 namespace XamarinNavigation
 {
@@ -23,7 +33,7 @@ namespace XamarinNavigation
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
             ViewModelLocator.LoadViewModelLocators();
 
-            var nav = new Services.NavigationService();
+            var nav = new Services.Navigation.NavigationService();
 
             nav.Configure(ViewModelLocator.MainView, typeof(MainPage));
             nav.Configure(ViewModelLocator.LoginView, typeof(LoginView));

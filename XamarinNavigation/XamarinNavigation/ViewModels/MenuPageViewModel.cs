@@ -1,6 +1,10 @@
-﻿using System;
+﻿using GalaSoft.MvvmLight.Views;
+using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows.Input;
+using Xamarin.Forms;
+using XamarinNavigation.ViewModels.Base;
 
 namespace XamarinNavigation.ViewModels
 {

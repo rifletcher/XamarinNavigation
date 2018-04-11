@@ -179,7 +179,7 @@
                    TargetType="{x:Type Button}">
                 <Setter Property="BorderRadius" Value="0" />
                 <!--<Setter Property="HeightRequest" Value="73" />-->
-                <Setter Property="HeightRequest" Value="33" />
+                <Setter Property="HeightRequest" Value="50" />
                 <Setter Property="HorizontalOptions" Value="Fill" />
                 <Setter Property="FontSize"
                         Value="{StaticResource MidMediumSize}" />

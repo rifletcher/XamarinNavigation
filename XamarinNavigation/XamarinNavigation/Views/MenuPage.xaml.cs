@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CommonServiceLocator;
+using GalaSoft.MvvmLight.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,6 +8,8 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamarinNavigation.ViewModels;
+using XamarinNavigation.ViewModels.Base;
 
 namespace XamarinNavigation.Views
 {

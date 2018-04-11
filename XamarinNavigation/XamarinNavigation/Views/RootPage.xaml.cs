@@ -9,7 +9,6 @@ using Xamarin.Forms.Xaml;
 
 namespace XamarinNavigation.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RootPage : MasterDetailPage
     {
         public RootPage()

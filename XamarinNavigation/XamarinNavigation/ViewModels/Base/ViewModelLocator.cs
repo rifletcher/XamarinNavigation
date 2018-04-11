@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GalaSoft.MvvmLight.Ioc;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
