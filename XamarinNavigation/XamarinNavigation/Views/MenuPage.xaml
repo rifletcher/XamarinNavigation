@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinNavigation.Views.MenuPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Gray" WidthRequest="200">
+            <Button Text="My Home" TextColor="White" BackgroundColor="Black" Command="{Binding GoHomeCommand}" />
+            <Button Text="My Page 1" TextColor="White" BackgroundColor="Black" Command="{Binding GoPage1Command}" />
+            <Button Text="My Page 2" TextColor="White" BackgroundColor="Black" Command="{Binding GoPage2Command}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
