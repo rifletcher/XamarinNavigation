@@ -16,8 +16,6 @@ namespace XamarinNavigation.Models
 
         public string Email { get; set; }
 
-        public string AvatarUrl { get; set; }
-
         public bool LoggedInWithMicrosoftAccount { get; set; }
     }
 }

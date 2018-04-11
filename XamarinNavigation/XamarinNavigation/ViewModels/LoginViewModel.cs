@@ -1,5 +1,4 @@
-﻿using GalaSoft.MvvmLight.Views;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using XamarinNavigation.Services.Authentication;
@@ -16,16 +15,18 @@ namespace XamarinNavigation.ViewModels
     public class LoginViewModel : BaseViewModel
     {
         private readonly IAuthenticationService _authenticationService;
-        private readonly INavigationService _navigationService;
+        private readonly GalaSoft.MvvmLight.Views.INavigationService _navigationService;
+        private readonly Dialog.IDialogService _dialogService;
 
         private ValidatableObject<string> _userName;
         private ValidatableObject<string> _password;
 
         public LoginViewModel(
-            IAuthenticationService authenticationService, INavigationService navigationService)
+            IAuthenticationService authenticationService, GalaSoft.MvvmLight.Views.INavigationService navigationService, Dialog.IDialogService dialogService)
         {
             _authenticationService = authenticationService;
             _navigationService = navigationService;
+            _dialogService = dialogService;
 
             _userName = new ValidatableObject<string>();
             _password = new ValidatableObject<string>();
@@ -105,32 +106,18 @@ namespace XamarinNavigation.ViewModels
 
                 if (succeeded)
                 {
-                    // todo
-                    //_navigationService.NavigateTo(ViewModelLocator.RootView);
                     IsBusy = false;
-                    //var menuPage = new MenuPage();
-                    ////App.Navigation = new NavigationPage(new MainPage());
-
-                    //App.RootPage = new RootPage
-                    //{
-                    //    Master = menuPage,
-                    //    Detail = App.Navigation
-                    //};
-                    //Application.Current.MainPage = App.RootPage;
-
                     _navigationService.NavigateTo(ViewModelLocator.RootView);
 
                 }
             }
             catch (ServiceAuthenticationException)
             {
-                // todo
-                //await DialogService.ShowAlertAsync("Please, try again", "Login error", "Ok");
+                await _dialogService.ShowAlertAsync("Please, try again", "Login error", "Ok");
             }
             catch (Exception ex)
             {
-                // todo
-                //await DialogService.ShowAlertAsync("An error occurred, try again", "Error", "Ok");
+                await _dialogService.ShowAlertAsync("An error occurred, try again", "Error", "Ok");
             }
             finally
             {

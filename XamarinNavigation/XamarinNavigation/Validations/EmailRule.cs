@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace XamarinNavigation.Validations
 {
@@ -17,7 +15,7 @@ namespace XamarinNavigation.Validations
         {
             return true;
             // todo
-            //return new System.ComponentModel.DataAnnotations.EmailAddressAttribute().IsValid(value);
+            //return new EmailAddressAttribute().IsValid(value);
         }
     }
 }

@@ -33,26 +33,19 @@ namespace XamarinNavigation
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
             ViewModelLocator.LoadViewModelLocators();
 
+            // dependency injection
             var nav = new Services.Navigation.NavigationService();
-
             nav.Configure(ViewModelLocator.MainView, typeof(MainPage));
             nav.Configure(ViewModelLocator.LoginView, typeof(LoginView));
             nav.Configure(ViewModelLocator.Page1View, typeof(Page1View));
-            nav.Configure(ViewModelLocator.RootView, typeof(RootPage));
-            // todo register services
+            nav.Configure(ViewModelLocator.RootView, typeof(RootPage));            
             SimpleIoc.Default.Register<INavigationService>(() => nav);
             var authentication = new AuthenticationService();
             SimpleIoc.Default.Register<IAuthenticationService>(() => authentication);
-            //var menuPage = new MenuPage();
+            var dialogService = new Dialog.DialogService();
+            SimpleIoc.Default.Register<Dialog.IDialogService>(() => dialogService);
+            // intialize navigation
             Navigation = new NavigationPage(new MainPage());
-
-            //RootPage = new RootPage
-            //{
-            //    Master = menuPage,
-            //    Detail = Navigation
-            //};
-            //MainPage = RootPage;
-
             nav.Initialize(Navigation);
             nav.NavigateTo(ViewModelLocator.LoginView);
         }

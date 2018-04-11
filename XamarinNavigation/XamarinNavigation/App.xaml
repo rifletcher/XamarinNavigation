@@ -24,24 +24,6 @@
             <Color x:Key="LightBackgroundColor">#005779</Color>
             <Color x:Key="DarkBackgroundColor">#002e42</Color>
 
-
-            <!-- CONVERTERS -->
-            <!--
-            <converters:CheckInTimeConverter x:Key="CheckInTimeConverter" />
-            <converters:CountToHeightConverter x:Key="CountToHeightConverter" />
-            <converters:EnabledToHeightConverter x:Key="EnabledToHeightConverter" />
-            <converters:HotelImageConverter x:Key="HotelImageConverter"/>
-            <converters:InverseBoolConverter x:Key="InverseBoolConverter"/>
-            <converters:MenuItemTypeConverter x:Key="MenuItemTypeConverter"/>
-            <converters:NotificationTypeToIconConverter x:Key="NotificationTypeToIconConverter"/>
-            <converters:NotificationTypeToTitleConverter x:Key="NotificationTypeToTitleConverter"/>
-            <converters:SelectedToBoolConverter x:Key="SelectedToBoolConverter"/>
-            <converters:ServiceNameToIconConverter x:Key="ServiceNameToIconConverter" />
-            <converters:SuggestionTypeToColorConverter x:Key="SuggestionTypeToColorConverter" />
-            <converters:AmbientLightValueConverter x:Key="AmbientLightValueConverter" />
-            <converters:TemperatureValueConverter x:Key="TemperatureValueConverter" />
-
-            -->
             <!-- FONTS -->
 
             <OnPlatform x:Key="LittleSize"
