@@ -79,15 +79,6 @@ namespace XamarinNavigation.ViewModels
                 if (isAuth)
                 {
                     IsBusy = false;
-                    var menuPage = new MenuPage();
-                    App.Navigation = new NavigationPage(new MainPage());
-
-                    App.RootPage = new RootPage
-                    {
-                        Master = menuPage,
-                        Detail = App.Navigation
-                    };
-                    Application.Current.MainPage = App.RootPage;
 
                     _navigationService.NavigateTo(ViewModelLocator.RootView);
                 }
